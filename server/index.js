@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 // UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-// const items = require('../database-mysql');
+const works = require('../database-mysql');
 // const items = require('../database-mongo');
 
 const app = express();
