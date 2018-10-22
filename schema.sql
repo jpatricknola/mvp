@@ -9,7 +9,8 @@ CREATE TABLE works (
   title varchar(100) NOT NULL,
   first varchar(200) NOT NULL,
   second varchar(200) NOT NULL,
-  third varchar(200) NOT NULL
+  third varchar(200) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 /*  Execute this file from the command line by typing:
