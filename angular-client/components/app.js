@@ -1,7 +1,7 @@
 angular.module('app')
   .controller('AppCtrl', (itemsService) => {
     itemsService.getAll((data) => {
-      this.items = data;
+      this.works = data;
     });
   })
   .component('app', {

@@ -1,7 +1,7 @@
 angular.module('app')
   .component('listItem', {
     bindings: {
-      item: '<',
+      work: '<',
     },
     controller() {
 

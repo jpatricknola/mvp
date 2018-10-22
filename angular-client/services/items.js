@@ -1,7 +1,7 @@
 angular.module('app')
   .service('itemsService', function itemsService($http) {
     this.getAll = (callback) => {
-      $http.get('/items')
+      $http.get('/works')
         .then(({ data }) => {
           if (callback) {
             callback(data);

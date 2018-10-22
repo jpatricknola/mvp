@@ -1,14 +1,15 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS haiku;
 
-CREATE DATABASE test;
+CREATE DATABASE haiku;
 
-USE test;
+USE haiku;
 
-CREATE TABLE items (
+CREATE TABLE works (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
-  PRIMARY KEY (ID)
+  title varchar(100) NOT NULL,
+  first varchar(200) NOT NULL,
+  second varchar(200) NOT NULL,
+  third varchar(200) NOT NULL
 );
 
 /*  Execute this file from the command line by typing:

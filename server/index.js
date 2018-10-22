@@ -11,11 +11,11 @@ const app = express();
 // app.use(express.static(__dirname + '/../react-client/dist'));
 
 // UNCOMMENT FOR ANGULAR
-// app.use(express.static(path.join(__dirname, '/../angular-client')));
-// app.use(express.static(path.join(__dirname, '/../node_modules')));
+app.use(express.static(path.join(__dirname, '/../angular-client')));
+app.use(express.static(path.join(__dirname, '/../node_modules')));
 
-app.get('/items', (req, res) => {
-  items.selectAll((err, data) => {
+app.get('/works', (req, res) => {
+  works.selectAll((err, data) => {
     if (err) {
       res.sendStatus(500);
     } else {
