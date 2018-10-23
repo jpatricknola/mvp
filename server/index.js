@@ -12,11 +12,12 @@ app.use(express.static(path.join(__dirname, '/../angular-client')));
 app.use(express.static(path.join(__dirname, '/../node_modules')));
 
 app.get('/works', (req, res) => {
+  console.log('recieved get request')
   works.selectAll((err, data) => {
     if (err) {
       res.sendStatus(500);
     } else {
-      res.json(data);
+      res.(data);
     }
   });
 });

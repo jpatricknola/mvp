@@ -1,9 +1,9 @@
-// const ajax = require("node.ajax");
+
 
 angular.module('app')
   .controller('AppCtrl', (itemsService) => {
-    itemsService.getAll((data) => {
-      this.works = data;
+    itemsService.getAll((works) => {
+      this.works = works;
     });
   })
   .component('app', {
