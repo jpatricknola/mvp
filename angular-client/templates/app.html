@@ -1,10 +1,10 @@
 <div>
-  <div>
-      <input type="text"/>
-      <button class="btn btn-primary" ngclick> HAIKUIFY </button>
-    <list items="$ctrl.works"/>
+  <div><h3> Haiku Generator </h3>
+      <input type="text" ng-model="newHaiku" />
+      <button class="btn btn-primary" ngclick="$ctrl.getHaiku"> HAIKUIFY </button>
+    <list works="$ctrl.works"/>
 
   </div>
 </div>
 
-//do get request on haikuify button
+<!-- add ngclick to button, trigger service getHaiku with text box value as 1st argument -->
