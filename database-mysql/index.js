@@ -18,8 +18,7 @@ const selectAll = (callback) => {
 };
 
 const save = (obj, callback) => {
-  const queryString = `INSERT INTO works (id, title, first, second, third) VALUES (${null}, ${obj.title}, ${obj.first}, ${obj.second}, ${obj.third})`;
-
+  const queryString = `INSERT INTO works (id, title, first, second, third) VALUES (${null}, "${obj.title}", "${obj.first}", "${obj.second}", "${obj.third}")`;
   connection.query(queryString, (err, results) => {
     if (err) {
       callback(err);

@@ -25,12 +25,12 @@ app.get('/works', (req, res) => {
 
 // save a new haiku to the database
 app.post('/works', (req, res) => {
-  console.log('recieved post request');
+  console.log('posty');
   req.on('data', (chunk) => {
-    const obj = chunk.data;
+    const obj = JSON.parse(chunk);
     db.save(obj, (result) => {
       console.log(result);
-      res.end(result);
+      res.end('namaste');
     });
   });
 });
