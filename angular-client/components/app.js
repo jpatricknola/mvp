@@ -15,7 +15,7 @@ angular.module('app')
       // itemsService.postReq(obj);
       setTimeout(() => {
         window.location.reload();
-      }, 2000);
+      }, 4000);
     };
   })
   .component('app', {

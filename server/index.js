@@ -15,7 +15,7 @@ app.get('/works', (req, res) => {
   db.selectAll((err, result) => {
     if (err) {
       console.log(err);
-      res.sendStatus(500);
+      res.Status(500).send(err);
     } else {
       console.log(result, 'result');
       res.send(result);
@@ -29,8 +29,7 @@ app.post('/works', (req, res) => {
   req.on('data', (chunk) => {
     const obj = JSON.parse(chunk);
     db.save(obj, (result) => {
-      console.log(result);
-      res.end('namaste');
+      res.send('namaste');
     });
   });
 });

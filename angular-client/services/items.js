@@ -123,11 +123,11 @@ angular.module('app')
                       .then((rando3b) => {
                         haikuObj.third += ' ';
                         haikuObj.third += rando3b.data.word;
-                        callback(haikuObj);
+                        this.postReq(haikuObj);
                         console.log('last and done for sure');
                       })
-                      .then(() => {
-                        this.postReq(haikuObj);
+                      .catch((err) => {
+                        console.log(err);
                       });
                   });
               });
